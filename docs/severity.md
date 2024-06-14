@@ -870,6 +870,7 @@
 |Detector|Critical|Major|Minor|Warning|Info|
 |---|---|---|---|---|---|
 |Clamav heartbeat|X|-|-|-|-|
+|Clamav queue length|X|-|-|-|-|
 
 
 ## prometheus-exporter_dnsmasq

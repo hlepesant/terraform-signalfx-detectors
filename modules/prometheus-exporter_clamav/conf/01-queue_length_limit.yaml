@@ -1,0 +1,16 @@
+module: clamav
+name: "Queue Length"
+id: clamav_queue_length
+
+transformation: true
+aggregation: true
+
+signals:
+  signal:
+    metric: clamav_queue_length
+
+rules:
+  critical:
+    threshold: 10
+    comparator: "=>"
+    lasting_duration: '15m'
