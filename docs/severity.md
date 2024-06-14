@@ -78,6 +78,7 @@
 - [organization_usage](#organization_usage)
 - [otel-collector_kubernetes-common](#otel-collector_kubernetes-common)
 - [prometheus-exporter_active-directory](#prometheus-exporter_active-directory)
+- [prometheus-exporter_clamav](#prometheus-exporter_clamav)
 - [prometheus-exporter_dnsmasq](#prometheus-exporter_dnsmasq)
 - [prometheus-exporter_docker-state](#prometheus-exporter_docker-state)
 - [prometheus-exporter_kong](#prometheus-exporter_kong)
@@ -862,6 +863,13 @@
 |Active-directory heartbeat|X|-|-|-|-|
 |Active-directory replication errors|X|X|-|-|-|
 |Active-directory active directory services|X|-|-|-|-|
+
+
+## prometheus-exporter_clamav
+
+|Detector|Critical|Major|Minor|Warning|Info|
+|---|---|---|---|---|---|
+|Clamav heartbeat|X|-|-|-|-|
 
 
 ## prometheus-exporter_dnsmasq
