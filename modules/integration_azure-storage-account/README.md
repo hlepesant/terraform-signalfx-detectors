@@ -22,7 +22,7 @@ existing [stack](https://github.com/claranet/terraform-signalfx-detectors/wiki/G
 
 ```hcl
 module "signalfx-detectors-integration-azure-storage-account" {
-  source = "github.com/claranet/terraform-signalfx-detectors.git//modules/integration_azure-storage-account?ref={revision}"
+  source = "github.com/hlepesant/terraform-signalfx-detectors.git//modules/integration_azure-storage-account?ref={revision}"
 
   environment   = var.environment
   notifications = local.notifications

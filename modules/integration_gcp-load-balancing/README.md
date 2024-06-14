@@ -23,7 +23,7 @@ existing [stack](https://github.com/claranet/terraform-signalfx-detectors/wiki/G
 
 ```hcl
 module "signalfx-detectors-integration-gcp-load-balancing" {
-  source = "github.com/claranet/terraform-signalfx-detectors.git//modules/integration_gcp-load-balancing?ref={revision}"
+  source = "github.com/hlepesant/terraform-signalfx-detectors.git//modules/integration_gcp-load-balancing?ref={revision}"
 
   environment    = var.environment
   notifications  = local.notifications

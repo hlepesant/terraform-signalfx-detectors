@@ -22,7 +22,7 @@ existing [stack](https://github.com/claranet/terraform-signalfx-detectors/wiki/G
 
 ```hcl
 module "signalfx-detectors-prometheus-exporter-oracledb" {
-  source = "github.com/claranet/terraform-signalfx-detectors.git//modules/prometheus-exporter_oracledb?ref={revision}"
+  source = "github.com/hlepesant/terraform-signalfx-detectors.git//modules/prometheus-exporter_oracledb?ref={revision}"
 
   environment   = var.environment
   notifications = local.notifications

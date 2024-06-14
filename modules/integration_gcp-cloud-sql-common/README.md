@@ -24,7 +24,7 @@ existing [stack](https://github.com/claranet/terraform-signalfx-detectors/wiki/G
 
 ```hcl
 module "signalfx-detectors-integration-gcp-cloud-sql-common" {
-  source = "github.com/claranet/terraform-signalfx-detectors.git//modules/integration_gcp-cloud-sql-common?ref={revision}"
+  source = "github.com/hlepesant/terraform-signalfx-detectors.git//modules/integration_gcp-cloud-sql-common?ref={revision}"
 
   environment    = var.environment
   notifications  = local.notifications

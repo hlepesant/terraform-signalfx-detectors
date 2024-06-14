@@ -28,7 +28,7 @@ existing [stack](https://github.com/claranet/terraform-signalfx-detectors/wiki/G
 
 ```hcl
 module "signalfx-detectors-otel-collector-kubernetes-common" {
-  source = "github.com/claranet/terraform-signalfx-detectors.git//modules/otel-collector_kubernetes-common?ref={revision}"
+  source = "github.com/hlepesant/terraform-signalfx-detectors.git//modules/otel-collector_kubernetes-common?ref={revision}"
 
   environment   = var.environment
   notifications = local.notifications

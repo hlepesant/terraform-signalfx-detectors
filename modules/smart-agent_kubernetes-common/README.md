@@ -28,7 +28,7 @@ existing [stack](https://github.com/claranet/terraform-signalfx-detectors/wiki/G
 
 ```hcl
 module "signalfx-detectors-smart-agent-kubernetes-common" {
-  source = "github.com/claranet/terraform-signalfx-detectors.git//modules/smart-agent_kubernetes-common?ref={revision}"
+  source = "github.com/hlepesant/terraform-signalfx-detectors.git//modules/smart-agent_kubernetes-common?ref={revision}"
 
   environment   = var.environment
   notifications = local.notifications

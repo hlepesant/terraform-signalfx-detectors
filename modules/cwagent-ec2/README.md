@@ -21,7 +21,7 @@ existing [stack](https://github.com/claranet/terraform-signalfx-detectors/wiki/G
 
 ```hcl
 module "signalfx-detectors-cwagent-ec2" {
-  source = "github.com/claranet/terraform-signalfx-detectors.git//modules/cwagent-ec2?ref={revision}"
+  source = "github.com/hlepesant/terraform-signalfx-detectors.git//modules/cwagent-ec2?ref={revision}"
 
   environment   = var.environment
   notifications = local.notifications

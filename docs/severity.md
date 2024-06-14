@@ -869,6 +869,7 @@
 |Detector|Critical|Major|Minor|Warning|Info|
 |---|---|---|---|---|---|
 |Dnsmasq heartbeat|X|-|-|-|-|
+|Dnsmasq hits|X|-|-|-|-|
 
 
 ## prometheus-exporter_docker-state

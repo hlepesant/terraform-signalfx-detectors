@@ -21,7 +21,7 @@ existing [stack](https://github.com/claranet/terraform-signalfx-detectors/wiki/G
 
 ```hcl
 module "signalfx-detectors-prometheus-exporter-docker-state" {
-  source = "github.com/claranet/terraform-signalfx-detectors.git//modules/prometheus-exporter_docker-state?ref={revision}"
+  source = "github.com/hlepesant/terraform-signalfx-detectors.git//modules/prometheus-exporter_docker-state?ref={revision}"
 
   environment   = var.environment
   notifications = local.notifications

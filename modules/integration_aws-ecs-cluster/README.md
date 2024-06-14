@@ -21,7 +21,7 @@ existing [stack](https://github.com/claranet/terraform-signalfx-detectors/wiki/G
 
 ```hcl
 module "signalfx-detectors-integration-aws-ecs-cluster" {
-  source = "github.com/claranet/terraform-signalfx-detectors.git//modules/integration_aws-ecs-cluster?ref={revision}"
+  source = "github.com/hlepesant/terraform-signalfx-detectors.git//modules/integration_aws-ecs-cluster?ref={revision}"
 
   environment   = var.environment
   notifications = local.notifications

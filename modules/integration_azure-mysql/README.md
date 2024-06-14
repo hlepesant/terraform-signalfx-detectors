@@ -21,7 +21,7 @@ existing [stack](https://github.com/claranet/terraform-signalfx-detectors/wiki/G
 
 ```hcl
 module "signalfx-detectors-integration-azure-mysql" {
-  source = "github.com/claranet/terraform-signalfx-detectors.git//modules/integration_azure-mysql?ref={revision}"
+  source = "github.com/hlepesant/terraform-signalfx-detectors.git//modules/integration_azure-mysql?ref={revision}"
 
   environment   = var.environment
   notifications = local.notifications

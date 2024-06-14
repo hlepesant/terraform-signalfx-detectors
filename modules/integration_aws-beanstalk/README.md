@@ -21,7 +21,7 @@ existing [stack](https://github.com/claranet/terraform-signalfx-detectors/wiki/G
 
 ```hcl
 module "signalfx-detectors-integration-aws-beanstalk" {
-  source = "github.com/claranet/terraform-signalfx-detectors.git//modules/integration_aws-beanstalk?ref={revision}"
+  source = "github.com/hlepesant/terraform-signalfx-detectors.git//modules/integration_aws-beanstalk?ref={revision}"
 
   environment   = var.environment
   notifications = local.notifications

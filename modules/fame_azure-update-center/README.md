@@ -21,7 +21,7 @@ existing [stack](https://github.com/claranet/terraform-signalfx-detectors/wiki/G
 
 ```hcl
 module "signalfx-detectors-fame-azure-update-center" {
-  source = "github.com/claranet/terraform-signalfx-detectors.git//modules/fame_azure-update-center?ref={revision}"
+  source = "github.com/hlepesant/terraform-signalfx-detectors.git//modules/fame_azure-update-center?ref={revision}"
 
   environment   = var.environment
   notifications = local.notifications

@@ -21,7 +21,7 @@ existing [stack](https://github.com/claranet/terraform-signalfx-detectors/wiki/G
 
 ```hcl
 module "signalfx-detectors-integration-azure-postgresql" {
-  source = "github.com/claranet/terraform-signalfx-detectors.git//modules/integration_azure-postgresql?ref={revision}"
+  source = "github.com/hlepesant/terraform-signalfx-detectors.git//modules/integration_azure-postgresql?ref={revision}"
 
   environment   = var.environment
   notifications = local.notifications

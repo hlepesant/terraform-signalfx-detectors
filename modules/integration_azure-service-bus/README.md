@@ -21,7 +21,7 @@ existing [stack](https://github.com/claranet/terraform-signalfx-detectors/wiki/G
 
 ```hcl
 module "signalfx-detectors-integration-azure-service-bus" {
-  source = "github.com/claranet/terraform-signalfx-detectors.git//modules/integration_azure-service-bus?ref={revision}"
+  source = "github.com/hlepesant/terraform-signalfx-detectors.git//modules/integration_azure-service-bus?ref={revision}"
 
   environment   = var.environment
   notifications = local.notifications

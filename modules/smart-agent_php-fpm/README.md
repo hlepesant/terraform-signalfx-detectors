@@ -22,7 +22,7 @@ existing [stack](https://github.com/claranet/terraform-signalfx-detectors/wiki/G
 
 ```hcl
 module "signalfx-detectors-smart-agent-php-fpm" {
-  source = "github.com/claranet/terraform-signalfx-detectors.git//modules/smart-agent_php-fpm?ref={revision}"
+  source = "github.com/hlepesant/terraform-signalfx-detectors.git//modules/smart-agent_php-fpm?ref={revision}"
 
   environment   = var.environment
   notifications = local.notifications

@@ -21,7 +21,7 @@ existing [stack](https://github.com/claranet/terraform-signalfx-detectors/wiki/G
 
 ```hcl
 module "signalfx-detectors-integration-aws-amazonmq-rabbitmq" {
-  source = "github.com/claranet/terraform-signalfx-detectors.git//modules/integration_aws-amazonmq-rabbitmq?ref={revision}"
+  source = "github.com/hlepesant/terraform-signalfx-detectors.git//modules/integration_aws-amazonmq-rabbitmq?ref={revision}"
 
   environment    = var.environment
   notifications  = local.notifications

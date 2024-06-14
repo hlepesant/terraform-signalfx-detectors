@@ -21,7 +21,7 @@ existing [stack](https://github.com/claranet/terraform-signalfx-detectors/wiki/G
 
 ```hcl
 module "signalfx-detectors-integration-gcp-pubsub-topic" {
-  source = "github.com/claranet/terraform-signalfx-detectors.git//modules/integration_gcp-pubsub-topic?ref={revision}"
+  source = "github.com/hlepesant/terraform-signalfx-detectors.git//modules/integration_gcp-pubsub-topic?ref={revision}"
 
   environment    = var.environment
   notifications  = local.notifications
