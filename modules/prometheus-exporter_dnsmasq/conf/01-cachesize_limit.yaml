@@ -5,8 +5,6 @@ id: dnsmasq_hits
 transformation: true
 aggregation: true
 
-filtering: "filter('system.type', 'prometheus-exporter')"
-
 signals:
   signal:
     metric: dnsmasq_hits

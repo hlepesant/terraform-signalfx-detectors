@@ -5,8 +5,6 @@ id: dnsmasq_hit_rate
 transformation: ".min(over='5m')"
 aggregation: true
 
-filtering: "filter('system.type', 'prometheus-exporter')"
-
 signals:
   A:
     metric: dnsmasq_hits

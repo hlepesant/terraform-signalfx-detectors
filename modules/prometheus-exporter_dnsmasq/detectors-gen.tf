@@ -34,8 +34,7 @@ resource "signalfx_detector" "dnsmasq_hits" {
   tags                    = compact(concat(local.common_tags, local.tags, var.extra_tags))
 
   program_text = <<-EOF
-    base_filtering = filter('system.type', 'prometheus-exporter')
-    signal = data('dnsmasq_hits', filter=base_filtering and ${module.filtering.signalflow})${var.dnsmasq_hits_aggregation_function}${var.dnsmasq_hits_transformation_function}.publish('signal')
+    signal = data('dnsmasq_hits', filter=${module.filtering.signalflow})${var.dnsmasq_hits_aggregation_function}${var.dnsmasq_hits_transformation_function}.publish('signal')
     detect(when(signal <= ${var.dnsmasq_hits_threshold_critical}%{if var.dnsmasq_hits_lasting_duration_critical != null}, lasting='${var.dnsmasq_hits_lasting_duration_critical}', at_least=${var.dnsmasq_hits_at_least_percentage_critical}%{endif})).publish('CRIT')
 EOF
 
@@ -62,9 +61,8 @@ resource "signalfx_detector" "dnsmasq_hit_rate" {
   tags                    = compact(concat(local.common_tags, local.tags, var.extra_tags))
 
   program_text = <<-EOF
-    base_filtering = filter('system.type', 'prometheus-exporter')
-    A = data('dnsmasq_hits', filter=base_filtering and ${module.filtering.signalflow})${var.dnsmasq_hit_rate_aggregation_function}${var.dnsmasq_hit_rate_transformation_function}
-    B = data('dnsmasq_misses', filter=base_filtering and ${module.filtering.signalflow})${var.dnsmasq_hit_rate_aggregation_function}${var.dnsmasq_hit_rate_transformation_function}
+    A = data('dnsmasq_hits', filter=${module.filtering.signalflow})${var.dnsmasq_hit_rate_aggregation_function}${var.dnsmasq_hit_rate_transformation_function}
+    B = data('dnsmasq_misses', filter=${module.filtering.signalflow})${var.dnsmasq_hit_rate_aggregation_function}${var.dnsmasq_hit_rate_transformation_function}
     signal = (A/(A+B)).fill(0).scale(100).publish('signal')
     detect(when(signal < ${var.dnsmasq_hit_rate_threshold_minor}%{if var.dnsmasq_hit_rate_lasting_duration_minor != null}, lasting='${var.dnsmasq_hit_rate_lasting_duration_minor}', at_least=${var.dnsmasq_hit_rate_at_least_percentage_minor}%{endif}) and (not when(signal <= ${var.dnsmasq_hit_rate_threshold_major}%{if var.dnsmasq_hit_rate_lasting_duration_major != null}, lasting='${var.dnsmasq_hit_rate_lasting_duration_major}', at_least=${var.dnsmasq_hit_rate_at_least_percentage_major}%{endif}))).publish('MINOR')
     detect(when(signal <= ${var.dnsmasq_hit_rate_threshold_major}%{if var.dnsmasq_hit_rate_lasting_duration_major != null}, lasting='${var.dnsmasq_hit_rate_lasting_duration_major}', at_least=${var.dnsmasq_hit_rate_at_least_percentage_major}%{endif})).publish('MAJOR')
