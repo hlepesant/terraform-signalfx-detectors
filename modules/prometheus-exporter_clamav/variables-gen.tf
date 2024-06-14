@@ -95,7 +95,7 @@ variable "clamav_queue_length_disabled" {
 variable "clamav_queue_length_threshold_critical" {
   description = "Critical threshold for clamav_queue_length detector"
   type        = number
-  default     = 10
+  default     = 100
 }
 
 variable "clamav_queue_length_lasting_duration_critical" {

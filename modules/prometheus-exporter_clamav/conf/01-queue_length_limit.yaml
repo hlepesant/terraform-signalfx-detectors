@@ -11,6 +11,6 @@ signals:
 
 rules:
   critical:
-    threshold: 10
+    threshold: 100
     comparator: "=>"
     lasting_duration: '15m'
