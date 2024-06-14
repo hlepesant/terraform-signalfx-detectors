@@ -870,6 +870,7 @@
 |---|---|---|---|---|---|
 |Dnsmasq heartbeat|X|-|-|-|-|
 |Dnsmasq hits|X|-|-|-|-|
+|Dnsmasq hit rate|-|X|X|-|-|
 
 
 ## prometheus-exporter_docker-state
